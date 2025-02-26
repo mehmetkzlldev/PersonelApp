@@ -8,11 +8,26 @@ namespace PersonelApp
 {
     public class Personel
     {
-        public string ad;
-        public string soyad;
-        public int yas;
-        public string tel;
-        public string adres;
+        public string Ad { get; set; }
+        public string Soyad { get; set; }
+        public string Tel { get; set; }
+        public string Adres { get; set; }
 
+        private int yas;
+        public int Yas 
+        {
+            get  
+            {
+                return yas;
+            }
+            set
+            {
+                
+                if (value > 0)
+                {
+                    yas = value;
+                }
+            }
+        }
     }
 }
