@@ -32,24 +32,26 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             panel2 = new Panel();
-            listBox1 = new ListBox();
+            lbPersoneller = new ListBox();
             label6 = new Label();
             lblad = new Label();
-            textBox1 = new TextBox();
+            txtAd = new TextBox();
             label2 = new Label();
-            textBox2 = new TextBox();
+            txtSoyad = new TextBox();
             label3 = new Label();
-            textBox3 = new TextBox();
+            txtYas = new TextBox();
             label4 = new Label();
-            textBox4 = new TextBox();
+            txtTelefon = new TextBox();
             label5 = new Label();
-            textBox5 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            txtAdres = new TextBox();
+            btnYeni = new Button();
+            btnEkleGuncelle = new Button();
+            btnSil = new Button();
+            pictureBox2 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -86,7 +88,7 @@
             // panel2
             // 
             panel2.BackColor = Color.Silver;
-            panel2.Controls.Add(listBox1);
+            panel2.Controls.Add(lbPersoneller);
             panel2.Controls.Add(label6);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 42);
@@ -94,15 +96,15 @@
             panel2.Size = new Size(205, 381);
             panel2.TabIndex = 1;
             // 
-            // listBox1
+            // lbPersoneller
             // 
-            listBox1.BackColor = Color.Silver;
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(3, 21);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(195, 349);
-            listBox1.TabIndex = 1;
+            lbPersoneller.BackColor = Color.Silver;
+            lbPersoneller.FormattingEnabled = true;
+            lbPersoneller.ItemHeight = 15;
+            lbPersoneller.Location = new Point(3, 21);
+            lbPersoneller.Name = "lbPersoneller";
+            lbPersoneller.Size = new Size(195, 349);
+            lbPersoneller.TabIndex = 1;
             // 
             // label6
             // 
@@ -127,13 +129,13 @@
             lblad.TabIndex = 2;
             lblad.Text = "Ad";
             // 
-            // textBox1
+            // txtAd
             // 
-            textBox1.Location = new Point(381, 80);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(185, 18);
-            textBox1.TabIndex = 3;
+            txtAd.Location = new Point(381, 80);
+            txtAd.Multiline = true;
+            txtAd.Name = "txtAd";
+            txtAd.Size = new Size(185, 18);
+            txtAd.TabIndex = 3;
             // 
             // label2
             // 
@@ -145,13 +147,13 @@
             label2.TabIndex = 2;
             label2.Text = "Soyad";
             // 
-            // textBox2
+            // txtSoyad
             // 
-            textBox2.Location = new Point(381, 104);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(185, 18);
-            textBox2.TabIndex = 3;
+            txtSoyad.Location = new Point(381, 104);
+            txtSoyad.Multiline = true;
+            txtSoyad.Name = "txtSoyad";
+            txtSoyad.Size = new Size(185, 18);
+            txtSoyad.TabIndex = 3;
             // 
             // label3
             // 
@@ -163,13 +165,13 @@
             label3.TabIndex = 2;
             label3.Text = "Yas";
             // 
-            // textBox3
+            // txtYas
             // 
-            textBox3.Location = new Point(381, 128);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(36, 18);
-            textBox3.TabIndex = 3;
+            txtYas.Location = new Point(381, 128);
+            txtYas.Multiline = true;
+            txtYas.Name = "txtYas";
+            txtYas.Size = new Size(36, 18);
+            txtYas.TabIndex = 3;
             // 
             // label4
             // 
@@ -181,13 +183,13 @@
             label4.TabIndex = 2;
             label4.Text = "Telefon";
             // 
-            // textBox4
+            // txtTelefon
             // 
-            textBox4.Location = new Point(388, 197);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(185, 18);
-            textBox4.TabIndex = 3;
+            txtTelefon.Location = new Point(388, 197);
+            txtTelefon.Multiline = true;
+            txtTelefon.Name = "txtTelefon";
+            txtTelefon.Size = new Size(185, 18);
+            txtTelefon.TabIndex = 3;
             // 
             // label5
             // 
@@ -199,46 +201,57 @@
             label5.TabIndex = 2;
             label5.Text = "Adres";
             // 
-            // textBox5
+            // txtAdres
             // 
-            textBox5.Location = new Point(388, 221);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(185, 101);
-            textBox5.TabIndex = 3;
+            txtAdres.Location = new Point(388, 221);
+            txtAdres.Multiline = true;
+            txtAdres.Name = "txtAdres";
+            txtAdres.Size = new Size(185, 101);
+            txtAdres.TabIndex = 3;
             // 
-            // button1
+            // btnYeni
             // 
-            button1.BackColor = Color.Yellow;
-            button1.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(381, 355);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 4;
-            button1.Text = "Yeni";
-            button1.UseVisualStyleBackColor = false;
+            btnYeni.BackColor = Color.Yellow;
+            btnYeni.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnYeni.Location = new Point(381, 355);
+            btnYeni.Name = "btnYeni";
+            btnYeni.Size = new Size(75, 23);
+            btnYeni.TabIndex = 4;
+            btnYeni.Text = "Yeni";
+            btnYeni.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnEkleGuncelle
             // 
-            button2.BackColor = Color.Lime;
-            button2.Font = new Font("Verdana", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(476, 355);
-            button2.Name = "button2";
-            button2.Size = new Size(145, 23);
-            button2.TabIndex = 5;
-            button2.Text = "Ekle/Guncelle";
-            button2.UseVisualStyleBackColor = false;
+            btnEkleGuncelle.BackColor = Color.Lime;
+            btnEkleGuncelle.Font = new Font("Verdana", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEkleGuncelle.Location = new Point(476, 355);
+            btnEkleGuncelle.Name = "btnEkleGuncelle";
+            btnEkleGuncelle.Size = new Size(145, 23);
+            btnEkleGuncelle.TabIndex = 5;
+            btnEkleGuncelle.Text = "Ekle/Guncelle";
+            btnEkleGuncelle.UseVisualStyleBackColor = false;
+            btnEkleGuncelle.Click += btnEkleGuncelle_Click;
             // 
-            // button3
+            // btnSil
             // 
-            button3.BackColor = Color.Red;
-            button3.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(287, 355);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 4;
-            button3.Text = "Sil";
-            button3.UseVisualStyleBackColor = false;
+            btnSil.BackColor = Color.Red;
+            btnSil.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSil.Location = new Point(287, 355);
+            btnSil.Name = "btnSil";
+            btnSil.Size = new Size(75, 23);
+            btnSil.TabIndex = 4;
+            btnSil.Text = "Sil";
+            btnSil.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.new_year_resolutions;
+            pictureBox2.Location = new Point(204, 42);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(62, 50);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 6;
+            pictureBox2.TabStop = false;
             // 
             // Form1
             // 
@@ -246,18 +259,19 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
             ClientSize = new Size(666, 423);
-            Controls.Add(button2);
-            Controls.Add(button3);
-            Controls.Add(button1);
-            Controls.Add(textBox5);
+            Controls.Add(pictureBox2);
+            Controls.Add(btnEkleGuncelle);
+            Controls.Add(btnSil);
+            Controls.Add(btnYeni);
+            Controls.Add(txtAdres);
             Controls.Add(label5);
-            Controls.Add(textBox4);
+            Controls.Add(txtTelefon);
             Controls.Add(label4);
-            Controls.Add(textBox3);
+            Controls.Add(txtYas);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(txtSoyad);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtAd);
             Controls.Add(lblad);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -268,6 +282,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -279,19 +294,20 @@
         private Panel panel2;
         private PictureBox pictureBox1;
         private Label lblad;
-        private TextBox textBox1;
+        private TextBox txtAd;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox txtSoyad;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox txtYas;
         private Label label4;
-        private TextBox textBox4;
+        private TextBox txtTelefon;
         private Label label5;
-        private TextBox textBox5;
-        private ListBox listBox1;
+        private TextBox txtAdres;
+        private ListBox lbPersoneller;
         private Label label6;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnYeni;
+        private Button btnEkleGuncelle;
+        private Button btnSil;
+        private PictureBox pictureBox2;
     }
 }

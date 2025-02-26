@@ -16,7 +16,7 @@ namespace PersonelApp
         private int yas;
         public int Yas 
         {
-            get  
+            get 
             {
                 return yas;
             }
@@ -28,6 +28,11 @@ namespace PersonelApp
                     yas = value;
                 }
             }
+        }
+
+        public string AdSoyad
+        {
+            get { return Ad + " " + Soyad; }
         }
     }
 }
